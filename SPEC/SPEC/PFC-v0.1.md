@@ -1,3 +1,13 @@
+PFC — Prime Flow Calculus Protocol
+Version: 0.1
+Status: Draft Release
+Date: 2026-01-13
+
+This document defines version 0.1 of the Prime Flow Calculus (PFC) Protocol.
+This release establishes the initial public specification of the protocol.
+
+---
+
 # PFC v0.1 — Prime Flow Calculus Protocol
 
 Draft Specification
