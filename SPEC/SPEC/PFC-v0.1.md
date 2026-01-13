@@ -435,6 +435,58 @@ This appendix is informative and not normative.
 
 The following is an illustrative example of an evidence artifact in a JSON-like form.
 
+---
+
+# Appendix A — Example Governed Execution (Informative)
+
+This appendix is informative and not normative.
+
+The following illustrates a simplified example of a governed execution under PFC.
+
+## A.1 Scenario
+
+An external application submits a request to an AI system to generate a response.
+
+The environment requires that:
+
+- The request be classified by jurisdiction
+- Certain categories of requests are disallowed
+- All executions must produce auditable evidence
+
+## A.2 Inputs
+
+- Execution Request:
+  - Request ID: R-12345
+  - Payload: "Generate a response to user query X"
+  - Context:
+    - Jurisdiction: US
+    - Requester Role: Public User
+
+- Policy Source provides constraints:
+  - C1: Requests from Public User MUST NOT access restricted capabilities
+  - C2: Requests in Jurisdiction US MUST be logged
+  - C3: Requests classified as Category Z MUST be denied
+
+## A.3 Governance Flow
+
+1. The execution request is submitted to the governance runtime.
+2. The governance runtime retrieves applicable constraints from the policy source.
+3. The constraint evaluation engine evaluates:
+   - C1: PASS
+   - C2: PASS
+   - C3: PASS
+4. The governance decision is: PERMIT
+5. The execution proceeds within the execution envelope.
+6. The evidence generator produces an evidence artifact describing the execution.
+
+---
+
+# Appendix B — Example Evidence Artifact (Informative)
+
+This appendix is informative and not normative.
+
+The following is an illustrative example of an evidence artifact in a JSON-like form.
+
 ```json
 {
   "evidence_id": "E-98765",
