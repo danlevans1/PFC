@@ -217,3 +217,169 @@ A conforming implementation MUST ensure that:
 The precise implementation of the execution envelope is left to implementers, provided the above properties are satisfied.
 
 ---
+---
+
+## 8. Constraint Model
+
+### 8.1 General
+
+PFC defines a constraint as any externally defined rule, policy, or condition that governs whether and how an execution may proceed.
+
+Constraints:
+
+- MUST be defined outside the AI system
+- MUST be interpretable by the governance runtime
+- MUST be evaluated deterministically
+- MUST NOT depend on AI model internal state
+
+Constraints MAY:
+
+- Reference request metadata
+- Reference execution context
+- Reference identity, jurisdiction, or classification information
+- Reference prior evidence artifacts
+
+### 8.2 Constraint Evaluation
+
+A conforming implementation MUST ensure that:
+
+- All applicable constraints are evaluated prior to or during execution
+- Constraint evaluation produces a deterministic result
+- The result of constraint evaluation is included in the evidence artifact
+
+Constraint evaluation MUST result in one of the following abstract outcomes:
+
+- Permit
+- Deny
+- Permit with modification
+- Permit with conditions
+
+The precise semantics of these outcomes are implementation-defined, but the outcome MUST be recorded in evidence.
+
+---
+
+## 9. Evidence Model
+
+### 9.1 General
+
+For each governed execution, the system MUST produce an evidence artifact.
+
+An evidence artifact is a deterministic, machine-verifiable record describing:
+
+- The execution request
+- The applicable constraints
+- The constraint evaluation result
+- The governance decision
+- The execution outcome (if any)
+
+### 9.2 Required Properties
+
+Evidence artifacts MUST be:
+
+- Deterministic
+- Tamper-evident
+- Independently verifiable
+- Stable under re-evaluation
+- Unforgeable by the AI system
+
+### 9.3 Evidence Content
+
+At a minimum, an evidence artifact MUST include:
+
+- A unique identifier
+- A timestamp or logical time marker
+- A representation or hash of the execution request
+- A representation or hash of the constraints applied
+- The evaluation result
+- The governance decision
+- The execution outcome or disposition
+- Integrity protection data (e.g., signature, hash chain, or equivalent)
+
+The specific encoding format is implementation-defined.
+
+---
+
+## 10. Determinism Requirements
+
+A conforming implementation MUST ensure that:
+
+- Given the same execution request, constraints, and context, the governance decision is identical
+- Evidence artifact generation is deterministic
+- Verification of an evidence artifact yields a deterministic result
+
+Non-determinism originating from the AI system itself does not invalidate conformance, provided that:
+
+- The governance decision process is deterministic
+- The evidence artifact accurately reflects what occurred
+
+The governance runtime MUST NOT rely on:
+
+- Randomness
+- Time-dependent external state (unless explicitly included in evidence)
+- Non-reproducible external services
+
+---
+
+## 11. Conformance Requirements
+
+### 11.1 General
+
+An implementation conforms to this specification if and only if it satisfies all requirements labeled as MUST or MUST NOT.
+
+### 11.2 Mandatory Capabilities
+
+A conforming implementation MUST:
+
+- Enforce externally defined constraints at execution time
+- Produce evidence artifacts for all governed executions
+- Ensure evidence artifacts are deterministic and verifiable
+- Treat the AI system as outside the trust boundary
+- Prevent the AI system from bypassing governance or evidence generation
+
+### 11.3 Optional Capabilities
+
+An implementation MAY:
+
+- Support multiple policy sources
+- Support multiple evidence storage backends
+- Support streaming or batch execution modes
+- Support hierarchical or compositional constraints
+
+Such features MUST NOT weaken any mandatory requirement.
+
+---
+
+## 12. Security Considerations
+
+PFC assumes that the AI system is not trustworthy.
+
+A conforming implementation SHOULD consider threats including:
+
+- Bypass of the governance runtime
+- Suppression or tampering of evidence artifacts
+- Forged policy inputs
+- Replay or substitution of execution requests
+- Confused-deputy and privilege escalation scenarios
+
+Mitigations are implementation-defined, but the architecture MUST preserve:
+
+- Integrity of governance decisions
+- Integrity of evidence artifacts
+- Independence from AI system behavior
+
+---
+
+## 13. Out of Scope
+
+This specification does not define:
+
+- Cryptographic algorithms
+- Policy languages
+- Evidence serialization formats
+- Deployment architectures
+- Regulatory processes
+- Legal interpretations
+
+These are left to profiles, companion standards, or implementations.
+
+---
