@@ -458,6 +458,7 @@ The following is an illustrative example of an evidence artifact in a JSON-like 
     "signature": "0xSIG..."
   }
 }
+
 This example is illustrative only. The actual encoding, hashing, and signing mechanisms are implementation-defined.
 
 ⸻
