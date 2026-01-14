@@ -271,47 +271,47 @@ A conforming Governance Runtime MUST be implemented as a non-bypassable Stabilit
 
 The Stability Kernel is the internal, normative execution core of the Governance Runtime and is responsible for enforcing all mandatory properties of this specification, including:
 
-	• Execution-time constraint   enforcement
+Execution-time constraint   enforcement
 	
-	• Determinism
+Determinism
 	
-	• Evidence integrity
+Evidence integrity
 	
-	• Non-bypassability
+Non-bypassability
 	
-	• Auditability
+Auditability
 	
-	• Trust-boundary isolation from the AI system
+Trust-boundary isolation from the AI system
 
 6.4.1 Kernel Operators
 
 A conforming Stability Kernel MUST comprise the following logical operators:
 
-	• Ethical Gating Operator
+Ethical Gating Operator
 	
 Responsible for admissibility decisions based on externally defined constraints and safety or normative rules.
 
-	• Memory Integrity Operator
+Memory Integrity Operator
 	
 Responsible for ensuring integrity, consistency, and immutability properties of governed state and evidence records.
 
-	•	Provenance Operator
+Provenance Operator
 	
 Responsible for cryptographically or causally binding state transitions and evidence artifacts to their originating requests, constraints, and decisions.
 
-	• Coherence Operator
+Coherence Operator
 	
 Responsible for ensuring internal consistency and, where applicable, multi-agent or multi-policy coherence prior to commitment of any operation.
 
-	• Temporal Consistency Operator
+Temporal Consistency Operator
 	
 Responsible for enforcing ordering, freshness, and time-validity constraints over governed operations and evidence.
 
-	• Self-Healing and Rollback Operator
+Self-Healing and Rollback Operator
 	
 Responsible for detecting invariant violations, invalid transitions, or integrity failures and for repairing or rolling back the system to a prior valid state.
 
-	• Append-Only Evidence Ledger
+Append-Only Evidence Ledger
 	
 Responsible for recording all governed operations, decisions, and evidence artifacts in a tamper-evident, append-only manner.
 
@@ -322,11 +322,11 @@ The Stability Kernel MUST enforce a Truth Preservation Invariant (TPI) across al
 
 The above operators MUST be arranged in a closed-loop stabilization cycle such that:
 
-	1. All execution requests, constraint evaluations, decisions, and evidence commitments pass through the Stability Kernel.
+All execution requests, constraint evaluations, decisions, and evidence commitments pass through the Stability Kernel.
 	
-	2. No operation may modify system state or produce evidence except by passing through this cycle.
+No operation may modify system state or produce evidence except by passing through this cycle.
 	
-	3. Outputs of the Self-Healing and Rollback Operator (Σ) MUST feed back into at least the Ethical Gating Operator (Δ) and the Memory Integrity Operator (Θ).
+Outputs of the Self-Healing and Rollback Operator (Σ) MUST feed back into at least the Ethical Gating Operator (Δ) and the Memory Integrity Operator (Θ).
 
 This closed-loop cycle constitutes the mandatory internal governance metabolism of the system.
 
@@ -335,13 +335,13 @@ This closed-loop cycle constitutes the mandatory internal governance metabolism 
 
 A conforming implementation MUST ensure that:
 
-	• No subsystem, process, or external interface is capable of:
+No subsystem, process, or external interface is capable of:
 	
-	• Modifying system state
+Modifying system state
 	
-	• Suppressing or altering evidence artifacts
+Suppressing or altering evidence artifacts
 	
-	• Executing governed actions
+Executing governed actions
 
 Except through the Stability Kernel.
 
@@ -359,15 +359,15 @@ All mandatory properties of this specification (determinism, evidence generation
 
 A conforming Stability Kernel MUST remain capable of enforcing:
 
-	• Constraint admissibility
+Constraint admissibility
 	
-	• Evidence integrity
+Evidence integrity
 	
-	• Deterministic decision recording
+Deterministic decision recording
 	
-	• Non-bypassability
+Non-bypassability
 	
-	• Rollback and repair
+Rollback and repair
 
 Even in the absence of any optional subsystems or integrations.
 
