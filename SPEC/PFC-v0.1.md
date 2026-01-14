@@ -416,17 +416,36 @@ A.1 Scenario
 
 An external application submits a request to an AI system to generate a response.
 
-The environment requires that: • The request be classified by jurisdiction • Certain categories of requests are disallowed • All executions must produce auditable evidence
+The environment requires that: 
+• The request be classified by jurisdiction 
+• Certain categories of requests are disallowed 
+• All executions must produce auditable evidence
 
 A.2 Inputs
 
-Execution Request: • Request ID: R-12345 • Payload: “Generate a response to user query X” • Context: • Jurisdiction: US • Requester Role: Public User
+Execution Request: 
+• Request ID: R-12345 
+• Payload: “Generate a response to user query X” 
+• Context: 
+• Jurisdiction: US 
+• Requester Role: Public User
 
-Policy Source provides constraints: • C1: Requests from Public User MUST NOT access restricted capabilities • C2: Requests in Jurisdiction US MUST be logged • C3: Requests classified as Category Z MUST be denied
+Policy Source provides constraints: • C1: Requests from Public User MUST NOT access restricted capabilities 
+• C2: Requests in Jurisdiction US MUST be logged 
+• C3: Requests classified as Category Z MUST be denied
 
-A.3 Governance Flow 1. The execution request is submitted to the governance runtime. 2. The governance runtime retrieves applicable constraints from the policy source. 3. The constraint evaluation engine evaluates: • C1: PASS • C2: PASS • C3: PASS 4. The governance decision is: PERMIT 5. The execution proceeds within the execution envelope. 6. The evidence generator produces an evidence artifact describing the execution.
+A.3 Governance Flow
 
-⸻
+1. The execution request is submitted to the governance runtime.
+2. The governance runtime retrieves applicable constraints from the policy source.
+3. The constraint evaluation engine evaluates:
+• C1: PASS
+• C2: PASS
+• C3: PASS
+4. The governance decision is: PERMIT
+5. The execution proceeds within the execution envelope.
+6. The evidence generator produces an evidence artifact describing the execution.
+
 
 Appendix B — Example Evidence Artifact (Informative)
 
@@ -440,7 +459,6 @@ Example evidence artifact:
 
 This example is illustrative only. The actual encoding, hashing, and signing mechanisms are implementation-defined.
 
-⸻
 
 Appendix C — Example Constraint Evaluation (Informative)
 
@@ -448,18 +466,31 @@ This appendix is informative and not normative.
 
 An example constraint evaluation process:
 
-Input: • Request metadata • Execution context • Policy constraints
+Input: 
+• Request metadata 
+• Execution context 
+• Policy constraints
 
-Evaluation: • Evaluate each constraint deterministically • Record result for each constraint • Produce a final governance decision
+Evaluation: 
+• Evaluate each constraint deterministically 
+• Record result for each constraint • Produce a final governance decision
 
-Output: • Decision: PERMIT / DENY / MODIFY / CONDITIONAL • Evidence record including: • All evaluated constraints • Their results • The final decision
+Output: 
+• Decision: PERMIT / DENY / MODIFY / CONDITIONAL 
+• Evidence record including: 
+• All evaluated constraints 
+• Their results 
+• The final decision
 
-⸻
 
 Appendix D — Profiles and Extensions (Informative)
 
 This specification defines a core protocol.
 
-Future documents or standards MAY define: • Standard policy languages • Standard evidence formats • Standard cryptographic profiles • Domain-specific governance profiles (e.g., healthcare, finance, government)
+Future documents or standards MAY define: 
+• Standard policy languages 
+• Standard evidence formats 
+• Standard cryptographic profiles 
+• Domain-specific governance profiles (e.g., healthcare, finance, government)
 
 Such profiles MUST NOT weaken the core requirements of this specification.
