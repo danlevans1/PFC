@@ -6,7 +6,9 @@ This repository contains the official specification of the Prime Flow Calculus (
 
 Read the full specification
 
-→ SPEC/PFC-v0.1.md
+The full specification can be found here:
+
+[Read the full specification](SPEC/PFC-v0.1.md)
 
 Prime Flow Calculus (PFC) is a deterministic governance runtime and evidence-generation architecture for AI systems.
 
