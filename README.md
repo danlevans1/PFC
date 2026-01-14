@@ -4,8 +4,6 @@ Any implementation or production use requires a commercial license from the auth
 
 This repository contains the official specification of the Prime Flow Calculus (PFC) Protocol — a deterministic governance runtime and evidence-generation architecture for AI systems.
 
-Read the full specification
-
 The full specification can be found here:
 
 [Read the full specification](SPEC/PFC-v0.1.md)
