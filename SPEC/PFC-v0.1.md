@@ -47,6 +47,7 @@ Producing verifiable evidence of system behavior
 Enabling audit, oversight, and compliance evaluation
 
 Supporting provider-independent assurance and reproducibility
+
 2. Terminology
 
 
