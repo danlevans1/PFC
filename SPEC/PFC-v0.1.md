@@ -152,6 +152,7 @@ Constraint Evaluation Engine
 Policy Source Interface
 Evidence Generator
 Evidence Store (logical)
+
 6.2 Control Flow
 
 At a minimum, the following control flow MUST occur for each governed execution:
@@ -168,6 +169,7 @@ The evaluation result
 The governance decision
 The execution outcome (if applicable)
 The evidence artifact is made available for audit and verification.
+
 6.3 Trust Boundaries
 
 The governance runtime and evidence generator form the trust boundary of the PFC system.
@@ -179,6 +181,85 @@ Conformance to this specification MUST NOT depend on:
 The correctness of the AI system
 The honesty of the AI provider
 The integrity of provider-controlled infrastructure
+
+6.4 Stability Kernel (Normative)
+
+A conforming Governance Runtime MUST be implemented as a non-bypassable Stability Kernel.
+
+The Stability Kernel is the internal, normative execution core of the Governance Runtime and is responsible for enforcing all mandatory properties of this specification, including:
+	•	Execution-time constraint enforcement
+	•	Determinism
+	•	Evidence integrity
+	•	Non-bypassability
+	•	Auditability
+	•	Trust-boundary isolation from the AI system
+
+6.4.1 Kernel Operators
+
+A conforming Stability Kernel MUST comprise the following logical operators:
+	•	Ethical Gating Operator (Δ):
+Responsible for admissibility decisions based on externally defined constraints and safety or normative rules.
+	•	Memory Integrity Operator (Θ):
+Responsible for ensuring integrity, consistency, and immutability properties of governed state and evidence records.
+	•	Provenance Operator (Θ⁺):
+Responsible for cryptographically or causally binding state transitions and evidence artifacts to their originating requests, constraints, and decisions.
+	•	Coherence Operator (Ω):
+Responsible for ensuring internal consistency and, where applicable, multi-agent or multi-policy coherence prior to commitment of any operation.
+	•	Temporal Consistency Operator (T):
+Responsible for enforcing ordering, freshness, and time-validity constraints over governed operations and evidence.
+	•	Self-Healing and Rollback Operator (Σ):
+Responsible for detecting invariant violations, invalid transitions, or integrity failures and for repairing or rolling back the system to a prior valid state.
+	•	Append-Only Evidence Ledger (Ψ):
+Responsible for recording all governed operations, decisions, and evidence artifacts in a tamper-evident, append-only manner.
+
+The Stability Kernel MUST enforce a Truth Preservation Invariant (TPI) across all such operators.
+
+⸻
+
+6.4.2 Closed-Loop Stabilization Cycle
+
+The above operators MUST be arranged in a closed-loop stabilization cycle such that:
+	1.	All execution requests, constraint evaluations, decisions, and evidence commitments pass through the Stability Kernel.
+	2.	No operation may modify system state or produce evidence except by passing through this cycle.
+	3.	Outputs of the Self-Healing and Rollback Operator (Σ) MUST feed back into at least the Ethical Gating Operator (Δ) and the Memory Integrity Operator (Θ).
+
+This closed-loop cycle constitutes the mandatory internal governance metabolism of the system.
+
+⸻
+
+6.4.3 Non-Bypassability Requirement
+
+A conforming implementation MUST ensure that:
+	•	No subsystem, process, or external interface is capable of:
+	•	Modifying system state
+	•	Suppressing or altering evidence artifacts
+	•	Executing governed actions
+
+Except through the Stability Kernel.
+
+Any implementation in which governance, evidence generation, or state transition may be bypassed MUST NOT be considered conformant to this specification.
+
+⸻
+
+6.4.4 Relationship to the Governance Runtime
+
+The Governance Runtime, as described in this specification, is the external interface and execution boundary of the Stability Kernel.
+
+All mandatory properties of this specification (determinism, evidence generation, enforcement, auditability, trust-boundary isolation) are normatively guaranteed by the Stability Kernel.
+
+⸻
+
+6.4.5 Minimal Viable Kernel Property
+
+A conforming Stability Kernel MUST remain capable of enforcing:
+	•	Constraint admissibility
+	•	Evidence integrity
+	•	Deterministic decision recording
+	•	Non-bypassability
+	•	Rollback and repair
+
+Even in the absence of any optional subsystems or integrations.
+
 7. Execution Envelope
 
 The execution envelope is the controlled environment in which governed executions occur.
