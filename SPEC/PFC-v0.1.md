@@ -288,21 +288,27 @@ The Stability Kernel is the internal, normative execution core of the Governance
 A conforming Stability Kernel MUST comprise the following logical operators:
 
 	• Ethical Gating Operator (Δ):
+	
 Responsible for admissibility decisions based on externally defined constraints and safety or normative rules.
 
 	• Memory Integrity Operator (Θ):
+	
 Responsible for ensuring integrity, consistency, and immutability properties of governed state and evidence records.
 
 	•	Provenance Operator (Θ⁺):
+	
 Responsible for cryptographically or causally binding state transitions and evidence artifacts to their originating requests, constraints, and decisions.
 
 	• Coherence Operator (Ω):
+	
 Responsible for ensuring internal consistency and, where applicable, multi-agent or multi-policy coherence prior to commitment of any operation.
 
 	• Temporal Consistency Operator (T):
+	
 Responsible for enforcing ordering, freshness, and time-validity constraints over governed operations and evidence.
 
 	• Self-Healing and Rollback Operator (Σ):
+	
 Responsible for detecting invariant violations, invalid transitions, or integrity failures and for repairing or rolling back the system to a prior valid state.
 
 	• Append-Only Evidence Ledger (Ψ):
@@ -319,6 +325,7 @@ The above operators MUST be arranged in a closed-loop stabilization cycle such t
 	1. All execution requests, constraint evaluations, decisions, and evidence commitments pass through the Stability Kernel.
 	
 	2. No operation may modify system state or produce evidence except by passing through this cycle.
+	
 	3. Outputs of the Self-Healing and Rollback Operator (Σ) MUST feed back into at least the Ethical Gating Operator (Δ) and the Memory Integrity Operator (Θ).
 
 This closed-loop cycle constitutes the mandatory internal governance metabolism of the system.
