@@ -48,4 +48,8 @@ This makes it possible to support regulated deployment scenarios where continuou
 
 PFC is model-agnostic and domain-agnostic, and is intended to be deployed as a governance layer around existing AI systems rather than as a replacement for them.
 
+The full specification can be found here:
+
+[Read the full specification](SPEC/PFC-v0.1.md)
+
 Prime Flow Calculus (PFC) Protocol, Version 0.1 (Draft), 2026.
