@@ -214,7 +214,6 @@ Responsible for recording all governed operations, decisions, and evidence artif
 
 The Stability Kernel MUST enforce a Truth Preservation Invariant (TPI) across all such operators.
 
-⸻
 
 6.4.2 Closed-Loop Stabilization Cycle
 
@@ -225,7 +224,6 @@ The above operators MUST be arranged in a closed-loop stabilization cycle such t
 
 This closed-loop cycle constitutes the mandatory internal governance metabolism of the system.
 
-⸻
 
 6.4.3 Non-Bypassability Requirement
 
@@ -239,7 +237,6 @@ Except through the Stability Kernel.
 
 Any implementation in which governance, evidence generation, or state transition may be bypassed MUST NOT be considered conformant to this specification.
 
-⸻
 
 6.4.4 Relationship to the Governance Runtime
 
@@ -247,7 +244,6 @@ The Governance Runtime, as described in this specification, is the external inte
 
 All mandatory properties of this specification (determinism, evidence generation, enforcement, auditability, trust-boundary isolation) are normatively guaranteed by the Stability Kernel.
 
-⸻
 
 6.4.5 Minimal Viable Kernel Property
 
