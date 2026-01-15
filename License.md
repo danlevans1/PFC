@@ -6,30 +6,32 @@ This repository contains the Prime Flow Calculus (PFC) specification and related
 
 Permission is granted to any person to:
 
-- Read, study, and evaluate this specification
+Read, study, and evaluate this specification
 
-- Reference it in academic, technical, or policy discussions
+Reference it in academic, technical, or policy discussions
 
-- Use it for internal review, education, or non-operational research
+Use it for internal review, education, or non-operational research
 
 PROHIBITED WITHOUT A COMMERCIAL LICENSE:
 
 You may NOT, without an explicit written license from the copyright holder:
 
-- Implement this system or any substantial part of it in software, hardware, or operational processes
+Implement this system or any substantial part of it in software, hardware, or operational processes
 
-- Use this system or its mechanisms in any production, commercial, governmental, or safety-critical environment
+Use this system or its mechanisms in any production, commercial, governmental, or safety-critical environment
 
-- Create derivative systems that implement the described invariant-gating, governance, rollback, or execution control architecture
+Create derivative systems that implement the described invariant-gating, governance, rollback, or execution control architecture
 
-- Offer products or services based on this specification or its mechanisms
+Offer products or services based on this specification or its mechanisms
 
 This specification is NOT open source.
 
 Any implementation or operational use of the Prime Flow Calculus (PFC) architecture requires a commercial license from the author.
 
 For licensing inquiries, contact:
+
 Dan Evans
+
 danlevans1@gmail.com
 
 THE SPECIFICATION IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
