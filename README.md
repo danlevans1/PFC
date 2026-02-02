@@ -1,14 +1,14 @@
-> **Public, non-commercial overview.**
->   
-> Prime Form Calculus (PFC) is an independent governance and stability architecture for intelligent systems.
->  
-> This repository contains conceptual, architectural, and exploratory material.
->   
-> It is not a product, service, or solicitation.
->
-> # Prime Form Calculus (PFC)
-> 
-## A Governance Layer for Stable, Truth-Bound Intelligence
+Public, non-commercial overview.
+
+Prime Form Calculus (PFC) is an independent governance and stability architecture for intelligent systems.
+
+This repository contains conceptual, architectural, and exploratory material.
+
+It is not a product, service, or solicitation.
+
+Prime Form Calculus (PFC)
+
+A Governance Layer for Stable, Truth-Bound Intelligence
 
 Artificial intelligence systems are becoming more capable, persistent, and embedded in real-world decision-making.
 
