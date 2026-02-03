@@ -10,7 +10,9 @@ Tests spanned multiple domains, demonstrating PFC’s governance strength under 
 
 Executive Summary
 
-Prime Form Calculus (PFC), Meta-Intelligence governance layer, transforms powerful language models from fluent guessers into stable, auditable reasoning engines.
+Scope Note: All stress testing described in this report was conducted in simulated, analytical, or controlled evaluation contexts. No live, production, or safety-critical systems were governed or affected.
+
+Prime Form Calculus (PFC), Meta-Intelligence governance layer, provides a governance framework that constrains and audits AI system behavior, emphasizing stability, traceability, and disciplined operation.
 
 Key components include:
 
@@ -56,9 +58,9 @@ prioritizing consistency,
 
 safety, and truth in high-stakes applications.
 
-Overall Verdict:
+Observed Governance Properties:
 
-PFC achieves #1-level performance in governed reasoning, outperforming raw frontier models (e.g., GPT-5 equivalents) by avoiding confident hallucinations and drift under pressure.
+PFC demonstrates bounded, auditable governance behavior under adversarial and high-uncertainty conditions, emphasizing disciplined refusal, consistency, and evidence preservation.
 
 Test Domains and Key Wins
 
