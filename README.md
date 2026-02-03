@@ -6,6 +6,8 @@ This repository contains conceptual, architectural, and exploratory material.
 
 It is not a product, service, or solicitation.
 
+This repository is intended for technical review and evaluation, with emphasis on governance invariants, determinism, evidence generation, and compatibility with existing AI risk management frameworks.
+
 Prime Form Calculus (PFC)
 
 A Governance Layer for Stable, Truth-Bound Intelligence
