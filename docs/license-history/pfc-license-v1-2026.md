@@ -1,3 +1,5 @@
+This document reflects the initial repository access terms prior to the adoption of the PFC Specification Access and Architecture Protection License.
+
 PFC LICENSE – SPECIFICATION ACCESS ONLY
 
 Copyright (c) 2026 Dan Evans. All rights reserved.
