@@ -11,6 +11,9 @@ It is not a product, service, or solicitation.
 Any implementation or production use requires 
 a commercial license from the author.
 
+Read Full Spec:
+https://github.com/danlevans1/PFC/blob/main/SPEC/PFC-v0.1.md
+
 ⸻
 
 Prime Form Calculus (PFC)
@@ -221,6 +224,7 @@ Compatibility with existing AI risk
 and compliance frameworks
 
 Read the full specification￼
+https://github.com/danlevans1/PFC/blob/main/SPEC/PFC-v0.1.md
 
 Prime Flow Calculus Protocol, 
 Version 0.1 (Draft), 2026.
