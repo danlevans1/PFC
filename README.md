@@ -1,3 +1,5 @@
+Public architecture overview. Implementation and operational deployment require licensing.
+
 Public, non-commercial overview.
 
 Prime Form Calculus (PFC) defines 
