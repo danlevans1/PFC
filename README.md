@@ -13,8 +13,7 @@ It is not a product, service, or solicitation.
 Any implementation or production use requires 
 a commercial license from the author.
 
-Read Full Spec:
-https://github.com/danlevans1/PFC/blob/main/SPEC/PFC-v0.1.md
+Read Full Spec: PFC Specification v0.1￼
 
 ⸻
 
