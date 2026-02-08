@@ -1,3 +1,8 @@
+Core Positioning
+
+PFC determines whether an action should be permitted based on consequence, authority, irreversibility, and systemic stability.
+Execution-control systems enforce those permissions at runtime.
+
 PFC — Prime Flow Calculus Protocol
 
 Version: 0.1 Status: Draft Release
