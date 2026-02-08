@@ -1,3 +1,7 @@
+Core Positioning
+
+PFC determines whether an action should be permitted based on consequence, authority, irreversibility, and systemic stability. Execution-control systems enforce those permissions at runtime.
+
 Public architecture overview. Implementation and operational deployment require licensing.
 
 Public, non-commercial overview.
